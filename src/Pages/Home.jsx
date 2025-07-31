@@ -10,11 +10,18 @@ import AboutUs from "../components/AboutUs";
 import { constants } from "../utils/constants";
 
 const Home = () => {
-
   return (
     <div className="w-full  ">
       {/* Hero Section */}
-      <section className="relative w-full min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden">
+      <section
+        className="
+  relative w-full 
+  min-h-[60vh] 
+  sm:min-h-[70vh] 
+  md:min-h-[calc(100vh-80px)] 
+  flex items-center justify-center overflow-hidden
+"
+      >
         <video
           src={heroVideo}
           autoPlay
@@ -22,7 +29,7 @@ const Home = () => {
           muted
           playsInline
           alt="Hero Video"
-          className="w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div className="text-center px-4 max-w-4xl mx-auto gap-4 flex-col">
