@@ -30,7 +30,7 @@ const Testimonials = () => {
               icon="mdi:shield"
               width="72"
               height="72"
-              className="w-full h-auto text-white border-2 border-red-950"
+              className="w-full h-auto text-white"
             />
           </div>
         </div>

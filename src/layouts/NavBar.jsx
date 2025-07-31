@@ -78,30 +78,38 @@ const NavBar = () => {
       </button>
 
       {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="absolute top-20 left-0 w-full bg-[#3C18BE] flex flex-col items-center py-4 z-50 lg:hidden">
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              to={item.link}
-              className="text-white py-2 w-full text-center hover:bg-blue-900"
-              onClick={() => setMenuOpen(false)}
-            >
-              {item.label}
-            </Link>
-          ))}
-          <button
-            type="button"
-            className="bg-white text-blue-800 p-3 font-semibold text-sm rounded-full mt-2 cursor-pointer"
-            onClick={() => {
-              navigate("/quote");
-              setMenuOpen(false);
-            }}
+      <div
+        className={`
+          absolute top-20 left-0 w-full bg-[#3C18BE] flex flex-col items-center py-4 z-50 lg:hidden
+          transition-all duration-300 ease-in-out
+          ${
+            menuOpen
+              ? "opacity-100 translate-y-0 pointer-events-auto"
+              : "opacity-0 -translate-y-4 pointer-events-none"
+          }
+        `}
+      >
+        {navItems.map((item) => (
+          <Link
+            key={item.label}
+            to={item.link}
+            className="text-white py-2 w-full text-center hover:bg-blue-900"
+            onClick={() => setMenuOpen(false)}
           >
-            Request A Quote
-          </button>
-        </div>
-      )}
+            {item.label}
+          </Link>
+        ))}
+        <button
+          type="button"
+          className="bg-white text-blue-800 p-3 font-semibold text-sm rounded-full mt-2 cursor-pointer"
+          onClick={() => {
+            navigate("/quote");
+            setMenuOpen(false);
+          }}
+        >
+          Request A Quote
+        </button>
+      </div>
     </nav>
   );
 };

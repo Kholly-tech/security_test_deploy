@@ -13,7 +13,7 @@ const WhoWeServe = () => {
                     <img src={who.icon} className="w-16 md:w-20 h-16 md:h-20" />
                     <h3 className="font-bold text-[17px] ml-2">{who.title}</h3>
                 </div>
-                <p className="text-start text-xs px-2 py-4">{who.descriptions}</p>
+                <p className="text-start text-sm px-2 py-4">{who.descriptions}</p>
             </div>
         ))}
       </div>

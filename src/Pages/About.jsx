@@ -12,11 +12,19 @@ const About = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative w-full min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden">
+      <section
+        className="
+  relative w-full 
+  min-h-[60vh] 
+  sm:min-h-[70vh] 
+  md:min-h-[calc(100vh-80px)] 
+  flex items-center justify-center overflow-hidden
+"
+      >
         <img
           src={heroImage}
           alt="Hero Video"
-          className="w-full h-screen object-cover"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div className="text-center px-4 max-w-4xl mx-auto gap-4 flex-col">

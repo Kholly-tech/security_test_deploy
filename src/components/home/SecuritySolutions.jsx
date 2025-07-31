@@ -23,7 +23,7 @@ const SecuritySolutions = ({ solutions }) => {
             <p className='text-xs text-red-800 font-semibold mb-3'>{solution.desc}</p>
 
             {/* Description */}
-            <p className="text-gray-700 text-sm">{solution.description}</p>
+            <p className="text-gray-700 text-sm md:text-lg">{solution.description}</p>
           </div>
         ))}
       </div>

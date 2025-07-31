@@ -3,7 +3,7 @@ import Card from '../ui/Card'
 
 const Mission = () => {
   return (
-    <div className="flex-col md:flex-row justify-center mx-auto p-4">
+    <div className="grid md:grid-cols-2 px-2 md:px-8 lg:px-16 justify-center mx-auto">
       <Card
         icon={""}
         title="OUR MISSION"
