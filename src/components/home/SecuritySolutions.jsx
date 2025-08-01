@@ -15,7 +15,7 @@ const SecuritySolutions = ({ solutions }) => {
         {solutions.map((solution, index) => (
           <div key={index} className="bg-white shadow-lg rounded-xl p-4">
             {/* Image */}
-            <img src={solution.image} alt={solution.title} className="w-full h-48 object-cover mb-4" />
+            <img src={solution.image} alt={solution.title} className="w-full h-96 object-cover mb-4 rounded-t-xl" />
 
             {/* Title */}
             <h3 className="text-sm font-semibold mb-1">{solution.title}</h3>

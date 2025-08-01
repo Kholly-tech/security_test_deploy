@@ -10,7 +10,7 @@ const CTA = () => {
         to long-term protection, our guards are trained, vetted, and ready
       </p>
       <button
-        className="bg-white text-indigo-900 px-6 py-2 rounded-full font-semibold"
+        className="bg-white text-indigo-900 px-6 py-2 rounded-full font-semibold cursor-pointer"
         onClick={() => navigate("/quote")}
       >
         Get a Quote

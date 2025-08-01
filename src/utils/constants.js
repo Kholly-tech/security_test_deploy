@@ -8,6 +8,12 @@ import solution1 from '../assets/images/solution1.png';
 import solution2 from '../assets/images/solution2.png';
 import solution3 from '../assets/images/solution3.png';
 import solution4 from '../assets/images/solution4.png';
+import solution5 from '../assets/images/solution5.png';
+import solution6 from '../assets/images/solution6.png';
+import solution7 from '../assets/images/solution7.png';
+import solution8 from '../assets/images/solution8.png';
+import solution9 from '../assets/images/solution9.png';
+import solution10 from '../assets/images/solution10.png';
 
 export const navItems = [
   { label: "Home", link: "/" },
@@ -41,7 +47,7 @@ export const constants = {
       data: [
         {
           label: "Request A Quote",
-          link: "",
+          link: "/quote",
         },
         {
           label: "Book Security",
@@ -53,7 +59,7 @@ export const constants = {
         },
         {
           label: "Join Our Team",
-          link: "",
+          link: "/team",
         },
       ],
     },
@@ -74,7 +80,7 @@ export const constants = {
         },
         {
           label: "Join Our Team",
-          link: "",
+          link: "/team",
         },
       ],
     },
@@ -192,5 +198,86 @@ export const constants = {
       description:
         "Our concierge security services combine front desk assistance with professional protection. Perfect for upscale residential buildings, hotels, and corporate lobbies.",
     },
+  ],
+  serviceData: [
+    {
+      image: solution1,
+      title: "ARMED/UNARMED GUARDS",
+      desc: "Our security guards are trained and customized to meet your specific needs",
+      description:
+        "These armed and unarmed security officers are deployed to deliver security services across various locations. They are available 24/7.",
+    },
+    {
+      image: solution2,
+      title: "ARMED/UNARMED PATROL GUARDS",
+      desc: "Our patrol guards are available for 24hours",
+      description:
+        "Our mobile patrol guard services offer flexible, high-visibility security coverage for large properties, warehouses, construction sites, and gated communities.",
+    },
+    {
+      image: solution3,
+      title: "PRIVATE SECURITY",
+      desc: "At Safety Security, Inc., we offer private security you can trust",
+      description:
+        "If you are seeking personal protection or considering hiring security guards, Safety Security, Inc. is here to assist you.",
+    },
+    {
+      image: solution4,
+      title: "CONCIERGE SECURITY",
+      desc: "We provide both protection and customer service",
+      description:
+        "Our concierge security services combine front desk assistance with professional protection. Perfect for upscale residential buildings, hotels, and corporate lobbies.",
+    },
+
+    {
+      image: solution5,
+      title: "CONSTRUCTION/ WAREHOUSE SITE SECURITY",
+      desc: "We provide trained guards for 24/7 patrols, access control, and theft prevention on active and vacant sites",
+      description:
+        "Protect your assets, equipment, and workforce with our specialized construction site security services.",
+    },
+    {
+      image: solution6,
+      title: "SPECIAL EVENTS SECURITY",
+      desc: "At Safety Security, Inc. we ensure a safe and seamless experience for your guests with our professional  security services",
+      description:
+        "From concerts and corporate functions to private gatherings and festivals, our trained security personnel provide crowd control, access management, and on-site response to protect attendees and organizers throughout Boston and surrounding areas.",
+    },
+
+    {
+      image: solution7,
+      title: "DATA SECURITY",
+      desc: "Trust us to secure your data with the same professionalism we bring to physical protection",
+      description:
+        "We help businesses in Boston and surrounding areas safeguard sensitive information from breaches, cyber threats, and unauthorized access through advanced encryption, access control, and cybersecurity protocols",
+    },
+    {
+      image: solution8,
+      title: "HOSPITAL SECURITY",
+      desc: "Ensure the safety of patients, staff, and visitors with our trusted hospital security services.",
+      description:
+        "At Safety Security, Inc. we provide trained security personnel for access control, emergency response, and round-the-clock monitoring across healthcare facilities in Boston and surrounding areas, maintaining a secure, calm, and compliant environment.",
+    },
+    {
+      image: solution9,
+      title: "INDUSTRIAL SECURITY",
+      desc: "we tailor solutions to meet the unique needs of industrial environments.",
+      description:
+        "We provide trained guards for perimeter patrol, access control, and 24/7 surveillance to protect valuable assets and ensure operational safety",
+    },
+    {
+      image: solution10,
+      title: "SCHOOL SECURITY",
+      desc: "We provide licensed, trained guards for K-12 schools, colleges, and campuses",
+      description:
+        "At Safety Security, Inc. we offer access control, visitor screening, and on-site response to ensure the safety of students and staffs.",
+    },
+  ],
+  socials: [
+    { link: "", icon: "bxl:facebook" },
+    { link: "", icon: "ri:instagram-fill" },
+    { link: "", icon: "uiw:twitter" },
+    { link: "", icon: "uil:youtube" },
+    { link: "", icon: "bi:wordpress" },
   ],
 };

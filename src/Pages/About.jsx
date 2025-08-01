@@ -4,8 +4,8 @@ import Testimonials from '../components/home/Testimonials'
 import heroImage from '../assets/images/hero.jpg';
 import AboutUs from '../components/AboutUs';
 import CTA from '../components/home/CTA';
-import TopSection from '../components/about/Values';
-import BottomSection from '../components/about/Stats';
+import Values from '../components/about/Values';
+import Stats from '../components/about/Stats';
 import Mission from '../components/about/Mission';
 
 const About = () => {
@@ -45,8 +45,8 @@ const About = () => {
 
       <Mission />
 
-      <TopSection />
-      <BottomSection />
+      <Values stage={1} />
+      <Stats />
 
       <Testimonials />
       <CTA />

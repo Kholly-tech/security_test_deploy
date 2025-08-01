@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import logo from "../assets/images/logo2.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { navItems } from "../utils/constants";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,17 +22,17 @@ const NavBar = () => {
             SAFETY SECURITY, INC.
           </h1>
           <p className="text-secondary text-xs md:text-[17px] font-normal">
-            securing your businesses and properties
+            securing your properties and businesses
           </p>
         </div>
       </Link>
 
       {/* Desktop Nav */}
       <div className="hidden lg:flex items-center gap-10">
-        {navItems.map((item) => (
+        {navItems.map((item, i) => (
           <div>
             <Link
-              key={item.label}
+              key={i}
               to={item.link}
               className="text-white hover:text-blue-200 font-medium underline-offset-2"
             >
@@ -44,15 +45,6 @@ const NavBar = () => {
         ))}
       </div>
       <div className="hidden lg:flex items-center gap-8">
-        {/* {navItems.map((item) => (
-          <Link
-            key={item.label}
-            to={item.link}
-            className="text-white hover:text-blue-200 font-medium underline-offset-2"
-          >
-            {item.label}
-          </Link>
-        ))} */}
         <button
           type="button"
           onClick={() => navigate("/quote")}
@@ -68,13 +60,7 @@ const NavBar = () => {
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Open menu"
       >
-        <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
-          <path
-            stroke="currentColor"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
+        <Icon icon="ci:hamburger-md" fontSize={44} />
       </button>
 
       {/* Mobile Menu */}
@@ -89,9 +75,9 @@ const NavBar = () => {
           }
         `}
       >
-        {navItems.map((item) => (
+        {navItems.map((item, i) => (
           <Link
-            key={item.label}
+            key={i}
             to={item.link}
             className="text-white py-2 w-full text-center hover:bg-blue-900"
             onClick={() => setMenuOpen(false)}

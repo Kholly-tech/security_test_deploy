@@ -1,6 +1,6 @@
 import React from "react";
 import heroImage from "../assets/images/hero.jpg";
-import heroVideo from "../assets/vids/ss.mp4";
+import heroVideo from "../assets/vids/ss1.mp4";
 import WhoWeServe from "../components/home/WhoWeServe";
 import PartnerWithUs from "../components/home/Patnership";
 import SecuritySolutions from "../components/home/SecuritySolutions";
