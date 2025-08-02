@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
 import React, { useState } from 'react'
-import { MapComponent, LocationMap } from '../components/MapComponent';
+import { LocationMap } from '../components/MapComponent';
 import { sendEmail } from '../utils/helperFunctions';
 
 const Contact = () => {
