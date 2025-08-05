@@ -7,45 +7,51 @@ import Services from "../Pages/Services";
 import Contact from "../Pages/Contact";
 import Quote from "../Pages/Quote";
 import Team from "../Pages/Team";
+import ScrollToTop from "../components/ScrollToTop";
 
 const router = createBrowserRouter([
-    {
-        element: <Layout />,
-        children: [
-            {
-                path: "/",
-                element: <Home />
-            },
-            {
-                path: "/about",
-                element: <About />
-            },
-            {
-                path: "/services",
-                element: <Services />
-            },
-            {
-                path: "/contact",
-                element: <Contact />
-            },
-            {
-                path: "/team",
-                element: <Team />
-            },
-            {
-                path: "/quote",
-                element: <Quote />
-            },
-        ]
-    }
-])
+  {
+    element: (
+      <>
+      <ScrollToTop />
+        <Layout />
+      </>
+    ),
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/services",
+        element: <Services />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/team",
+        element: <Team />,
+      },
+      {
+        path: "/quote",
+        element: <Quote />,
+      },
+    ],
+  },
+]);
 
 const Routes = () => {
-    return (
-        <>
-            <RouterProvider router={router} />
-        </>
-    )
-}
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
+};
 
-export default Routes
+export default Routes;

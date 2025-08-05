@@ -1,43 +1,115 @@
-import React from 'react';
+import { Icon } from "@iconify/react/dist/iconify.js";
+import React, { useState, useEffect, useRef } from "react";
 
 const Stats = () => {
+  const [counts, setCounts] = useState({
+    happyClients: 0,
+    securityGuards1: 0,
+    securityGuards2: 0,
+    securityGuards3: 0,
+  });
+
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const [animeted, setAnimated] = useState(false);
+  const statsRef = useRef(null);
+
+  const targetCounts = {
+    happyClients: 100,
+    securityGuards1: 50,
+    securityGuards2: 50,
+    securityGuards3: 50,
+  };
+
+  const duration = 2000; // Animation duration in milliseconds
+
+  useEffect(() => {
+    if (hasAnimated) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+            animateCounts();
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of component is visible
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => {
+      if (statsRef.current) {
+        observer.unobserve(statsRef.current);
+      }
+    };
+  }, [hasAnimated]);
+
+  const animateCounts = () => {
+    const startTime = Date.now();
+
+    const updateCounts = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      setCounts({
+        happyClients: Math.floor(progress * targetCounts.happyClients),
+        securityGuards1: Math.floor(progress * targetCounts.securityGuards1),
+        securityGuards2: Math.floor(progress * targetCounts.securityGuards2),
+        securityGuards3: Math.floor(progress * targetCounts.securityGuards3),
+      });
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCounts);
+      }
+    };
+
+    requestAnimationFrame(updateCounts);
+  };
+
   return (
-    <div className="bg-white my-20 py-12 px-6 md:px-24">
+    <div ref={statsRef} className="bg-white my-20 py-12 px-6 md:px-24">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        {/* Card 1: 100+ Happy Clients */}
-        <div className="bg-white shadow-md rounded-lg p-6 text-center">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-secondary mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14L9 19.828 3.172 14m0 0L9 8.172 14.828 14z" />
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-          <h3 className="text-2xl font-bold mt-2 text-primary">100+</h3>
+        {/* Card 1: Happy Clients */}
+        <div className="bg-white shadow-md rounded-lg p-6 text-center flex flex-col items-center">
+          <Icon
+            icon="fa7-regular:laugh"
+            fontSize={44}
+            className="items-center text-red-500 font-bold"
+          />
+          <h3 className="text-2xl font-bold mt-2 text-primary">
+            {counts.happyClients}+
+          </h3>
           <p className="text-gray-600">HAPPY CLIENTS</p>
         </div>
 
-        {/* Card 2: 50+ Security Guards */}
-        <div className="bg-white shadow-md rounded-lg p-6 text-center">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-secondary mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM3.859 20.141L7.141 17m5.657 0a4 4 0 11-.586-7.814 4 4 0 01.586 7.814zM14.5 19a4 4 0 01-3.743-4.697l7.486-3.743A4 4 0 0119 15m-7 2a4 4 0 010 8H8a4 4 0 010-8z" />
-          </svg>
-          <h3 className="text-2xl font-bold mt-2 text-primary">50+</h3>
+        {/* Card 2: Security Guards */}
+        <div className="bg-white shadow-md rounded-lg p-6 text-center flex flex-col items-center">
+          <Icon icon="hugeicons:prison-guard" fontSize={44} className="text-red-500 font-bold" />
+          <h3 className="text-2xl font-bold mt-2 text-primary">
+            {counts.securityGuards1}+
+          </h3>
           <p className="text-gray-600">SECURITY GUARDS</p>
         </div>
 
-        {/* Card 3: 50+ Security Guards */}
-        <div className="bg-white shadow-md rounded-lg p-6 text-center">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-secondary mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM3.859 20.141L7.141 17m5.657 0a4 4 0 11-.586-7.814 4 4 0 01.586 7.814zM14.5 19a4 4 0 01-3.743-4.697l7.486-3.743A4 4 0 0119 15m-7 2a4 4 0 010 8H8a4 4 0 010-8z" />
-          </svg>
-          <h3 className="text-2xl font-bold mt-2 text-primary">50+</h3>
+        {/* Card 3: Security Guards */}
+        <div className="bg-white shadow-md rounded-lg p-6 text-center flex flex-col items-center">
+          <Icon icon="hugeicons:prison-guard" fontSize={44} className="text-red-500 font-bold" />
+          <h3 className="text-2xl font-bold mt-2 text-primary">
+            {counts.securityGuards2}+
+          </h3>
           <p className="text-gray-600">SECURITY GUARDS</p>
         </div>
 
-        {/* Card 4: 50+ Security Guards */}
-        <div className="bg-white shadow-md rounded-lg p-6 text-center">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-secondary mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM3.859 20.141L7.141 17m5.657 0a4 4 0 11-.586-7.814 4 4 0 01.586 7.814zM14.5 19a4 4 0 01-3.743-4.697l7.486-3.743A4 4 0 0119 15m-7 2a4 4 0 010 8H8a4 4 0 010-8z" />
-          </svg>
-          <h3 className="text-2xl font-bold mt-2 text-primary">50+</h3>
+        {/* Card 4: Security Guards */}
+        <div className="bg-white shadow-md rounded-lg p-6 text-center flex flex-col items-center">
+          <Icon icon="hugeicons:prison-guard" fontSize={44} className="text-red-500 font-bold" />
+          <h3 className="text-2xl font-bold mt-2 text-primary">
+            {counts.securityGuards3}+
+          </h3>
           <p className="text-gray-600">SECURITY GUARDS</p>
         </div>
       </div>

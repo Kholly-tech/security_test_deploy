@@ -27,7 +27,7 @@ export const CheckCircle = () => (
 
 const PartnerWithUs = () => {
   return (
-    <div className="bg-indigo-900 text-white pb-6 md:pb-0">
+    <div className="bg-indigo-900 text-white pb-6 md:pb-0 mt-8">
       <div className="flex flex-col md:flex-row items-center">
         {/* Security Guard Image */}
         <div className="w-full md:w-1/2 mb-6 md:mb-0 md:mr-8">

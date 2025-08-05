@@ -41,7 +41,9 @@ const About = () => {
         </div>
       </section>
 
-      <AboutUs />
+      <div id='#about'>
+        <AboutUs />
+      </div>
 
       <Mission />
 
@@ -49,7 +51,9 @@ const About = () => {
       <Stats />
 
       <Testimonials />
-      <CTA />
+      <section className='py-10'>
+        <CTA />
+      </section>
     </div>
   );
 }

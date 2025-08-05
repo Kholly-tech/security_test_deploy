@@ -2,9 +2,10 @@ import React from "react";
 import serviceHero from "../assets/images/serviceHero.png";
 import SecuritySolutions from "../components/home/SecuritySolutions";
 import { constants } from "../utils/constants";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -75,7 +76,10 @@ const Services = () => {
               >
                 Join Our Team
               </Link>
-              <button className="bg-white text-[#2C1678] px-4 py-4 rounded-full hover:bg-accent transition duration-300">
+              <button
+                className="bg-white text-[#2C1678] px-4 py-4 rounded-full hover:bg-accent transition duration-300"
+                onClick={() => navigate("/quote")}
+              >
                 Get a Security Consultation
               </button>
             </div>

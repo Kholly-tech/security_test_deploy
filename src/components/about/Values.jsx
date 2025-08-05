@@ -1,11 +1,16 @@
 import React from "react";
 import { CheckCircle } from "../home/Patnership";
-import { Link } from "react-router-dom";
-import serviceHero from '../../assets/images/serviceHero.png';
+import { Link, useNavigate } from "react-router-dom";
+import serviceHero from "../../assets/images/serviceHero.png";
 
 const Values = ({ stage }) => {
+  const navigate = useNavigate();
   return (
-    <div className={`bg-[#2C1678] text-white ${stage === 1 ? 'py-12 px-6 md:px-24' : 'pb-6 md:pb-0' }`}>
+    <div
+      className={`bg-[#2C1678] text-white ${
+        stage === 1 ? "py-12 px-6 md:px-24" : "pb-6 md:pb-0"
+      }`}
+    >
       <div className="flex flex-col md:flex-row justify-between items-start">
         {/* Left Side: Description */}
         {stage === 1 && (
@@ -30,7 +35,10 @@ const Values = ({ stage }) => {
               >
                 Join Our Team
               </Link>
-              <button className="bg-white text-[#2C1678] px-4 py-2 rounded-full hover:bg-accent transition duration-300">
+              <button
+                className="bg-white text-[#2C1678] px-4 py-2 rounded-full hover:bg-accent transition duration-300 cursor-pointer"
+                onClick={() => navigate('/quote')}
+              >
                 Book Our Service
               </button>
             </div>
@@ -91,17 +99,19 @@ const Values = ({ stage }) => {
           </div>
         </div>
 
-        {stage === 1 && (<div className="md:hidden mt-6 flex space-x-4 mx-auto items-center justify-end">
-          <Link
-            to='/team'
-            className="text-sm font-semibold text-white hover:text-accent"
-          >
-            Join Our Team
-          </Link>
-          <button className="bg-white text-[#2C1678] px-4 py-2 rounded-full hover:bg-accent transition duration-300">
-            Book Our Service
-          </button>
-        </div>)}
+        {stage === 1 && (
+          <div className="md:hidden mt-6 flex space-x-4 mx-auto items-center justify-end">
+            <Link
+              to="/team"
+              className="text-sm font-semibold text-white hover:text-accent"
+            >
+              Join Our Team
+            </Link>
+            <button className="bg-white text-[#2C1678] px-4 py-2 rounded-full hover:bg-accent transition duration-300">
+              Book Our Service
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

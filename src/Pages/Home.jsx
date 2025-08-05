@@ -47,7 +47,7 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <AboutUs />
+      <AboutUs source="home" />
 
       {/* Industries We Serve */}
       <section className="py-8">
@@ -65,7 +65,9 @@ const Home = () => {
       </section>
 
       {/* Call to Action */}
-      <CTA />
+      <section className="py-8">
+        <CTA />
+      </section>
 
       {/* Testimonials */}
       <section className="py-8">

@@ -1,14 +1,21 @@
 import React from 'react'
 import secureIcon from '../assets/icons/Vector.png';
 import { Icon } from '@iconify/react/dist/iconify.js';
+import { useNavigate } from 'react-router-dom';
 
-const AboutUs = () => {
+const AboutUs = ({ source = 'about' }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-white w-full py-16 px-6 sm:px-8 md:px-12 lg:px-18">
       <div className=" mx-auto flex flex-col md:flex-row items-center justify-between">
         {/* Left Section: Description */}
         <div className="w-full md:w-7/12 mb-8 md:mb-0">
-          <h2 className="text-2xl font-bold mb-4 text-indigo-900">ABOUT US</h2>
+          {source !== "about" && (
+            <h2 className="text-2xl font-bold mb-4 text-indigo-900">
+              ABOUT US
+            </h2>
+          )}
           <p className="text-lg mb-8">
             We are a professional security guard company based in Boston, MA,
             with over 17 years of experience, we are committed to protecting
@@ -25,9 +32,13 @@ const AboutUs = () => {
           </p>
 
           {/* Button */}
-          <button className="mt-6 bg-indigo-900 text-white px-6 py-3 rounded-full hover:bg-indigo-800 transition duration-300">
-            Read More
-          </button>
+          {source !== "about" && (
+            <button className="mt-6 bg-indigo-900 text-white px-6 py-3 rounded-full hover:bg-indigo-800 transition duration-300 cursor-pointer"
+            onClick={() => navigate('/about#about')}
+            >
+              Read More
+            </button>
+          )}
         </div>
 
         {/* Right Section: Image with Text Overlay */}

@@ -20,10 +20,10 @@ const SecuritySolutions = ({ solutions }) => {
             {/* Title */}
             <h3 className="text-sm font-semibold mb-1">{solution.title}</h3>
 
-            <p className='text-xs text-red-800 font-semibold mb-3'>{solution.desc}</p>
+            <p className='text-xs md:text-[16px] text-red-800 font-semibold mb-3'>{solution.desc}</p>
 
             {/* Description */}
-            <p className="text-gray-700 text-sm md:text-lg">{solution.description}</p>
+            <p className="text-gray-700 text-sm md:text-[18px]">{solution.description}</p>
           </div>
         ))}
       </div>
