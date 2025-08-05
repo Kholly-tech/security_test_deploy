@@ -278,6 +278,6 @@ export const constants = {
     { link: "", icon: "ri:instagram-fill" },
     { link: "", icon: "uiw:twitter" },
     { link: "", icon: "uil:youtube" },
-    { link: "", icon: "bi:wordpress" },
+    // { link: "", icon: "bi:wordpress" },
   ],
 };
