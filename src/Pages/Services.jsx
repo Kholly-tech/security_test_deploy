@@ -47,9 +47,11 @@ const Services = () => {
         </div>
       </section>
 
-      <SecuritySolutions solutions={constants.serviceData} />
+      <section className="md:py-4 pt-4">
+        <SecuritySolutions solutions={constants.serviceData} />
+      </section>
 
-      <div className="bg-indigo-900 text-white pb-6 md:pb-0 mb-8 md:mb-16">
+      <div className="bg-indigo-900 text-white pb-6 md:pb-0 my-8 mb-16">
         <div className="flex flex-col md:flex-row items-center">
           {/* Security Guard Image */}
           <div className="w-full md:w-1/2 mb-6 md:mb-0 md:mr-8">
@@ -61,7 +63,7 @@ const Services = () => {
           </div>
 
           {/* Benefits Section */}
-          <div className="w-full md:w-1/2 px-4 sm:px-8 lg:px-12">
+          <div className="w-full y-4 md:w-1/2 px-4 sm:px-8 lg:px-12">
             <h2 className="text-2xl font-bold ">
               Protect What Matters Most. Partner with Safety Security, Inc.
             </h2>

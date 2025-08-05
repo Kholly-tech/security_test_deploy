@@ -12,7 +12,7 @@ const Footer = () => {
           <img
             src={constants.footerLogo}
             alt="LIFT Logo"
-            className="w-20 h-8"
+            className="w-60 h-48 -mt-12"
           />
         </div> */}
 
@@ -64,8 +64,8 @@ const Footer = () => {
         <div className="flex flex-col space-y-4 md:w-1/4">
           <span className="font-semibold">Contact Us</span>
           <p>Address: 154 Maverick Street, Boston, MA 02128</p>
-          <p>Telephone: 781.471.78</p>
-          <p>Fax: 781.810.0430</p>
+          <p>Telephone: 781.471.8</p>
+          <p className="ml-21">781.816.0430</p>
         </div>
 
         {/* Social */}

@@ -53,8 +53,8 @@ const Contact = () => {
         <LocationMap />
       </div>
 
-      <div className="grid md:grid-cols-2 p-4 gap-8 mb-14 md:mb-20">
-        <div className="flex-col space-y-4">
+      <div className="grid md:grid-cols-2 p-4 gap-8 mt-3 mb-14 md:mb-20">
+        <div className="flex-col space-y-4 mt-3">
           <div className="shadow-lg p-4 rounded-md">
             <div className="flex flex-row items-center justify-start gap-6">
               <div className="w-10 h-10 rounded-full bg-red-200 flex items-center justify-center">
@@ -92,9 +92,12 @@ const Contact = () => {
                   className="text-red-500 font-extrabold"
                 />
               </div>
-              <h3 className="text-[16px] md:text-lg font-bold">
+              <a
+                href="mailto:Service@safetysecurityinc.com"
+                className="text-[16px] md:text-lg font-bold"
+              >
                 Service@safetysecurityinc.com
-              </h3>
+              </a>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import serve1 from "../assets/icons/serve1.svg";
 import serve2 from "../assets/icons/serve2.svg";
 import serve3 from "../assets/icons/serve3.svg";
 import serve4 from "../assets/icons/serve4.svg";
-import logoLift from "../assets/icons/logoLift.svg";
+import logoLift from "../assets/images/logo1.png";
 
 import solution1 from '../assets/images/solution1.png';
 import solution2 from '../assets/images/solution2.png';

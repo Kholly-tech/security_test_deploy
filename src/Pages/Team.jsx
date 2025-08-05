@@ -8,7 +8,7 @@ const Team = () => {
   return (
     <div>
       <div className="text-center my-10 md:my-20">
-        <h1 className="text-3xl md:text-5xl lg:text-7xl font-extrabold text-[#3C18BE]">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-[#3C18BE]">
           BE A PART OF OUR TEAM
         </h1>
         <p className="text-lg md:text-xl lg:text-3xl mt-2 font-semibold">
@@ -78,7 +78,9 @@ const Team = () => {
         </div>
       </div>
 
-      <Values stage={2} />
+      <section className='mb-13 md:mb-16'>
+        <Values stage={2} />
+      </section>
     </div>
   );
 }
