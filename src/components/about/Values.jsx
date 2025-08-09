@@ -7,18 +7,16 @@ const Values = ({ stage }) => {
   const navigate = useNavigate();
   return (
     <div
-      className={`bg-[#2C1678] text-white ${
+      className={`bg-white text-black ${
         stage === 1 ? "py-12 px-6 md:px-24" : "pb-6 md:pb-0"
       }`}
     >
+      <h2 className="text-2xl font-bold mb-6 md:px-10">Our Value and Philosophy</h2>
       <div className="flex flex-col md:flex-row justify-between items-start">
         {/* Left Side: Description */}
         {stage === 1 && (
           <div className="w-full md:w-1/2 mb-8 md:mb-0 px-5">
-            <h2 className="text-2xl font-bold mb-4">
-              OUR VALUE AND PHILOSOPHY
-            </h2>
-            <p className="text-gray-200 leading-relaxed items-end md:text-end">
+            <p className="text-black md:text-lg lg:text-xl leading-relaxed items-end md:text-end">
               Our approach to service delivery is rooted in a people-first
               philosophy and a strong commitment to collaboration. We believe
               effective security starts with understanding the unique needs of
@@ -31,13 +29,13 @@ const Values = ({ stage }) => {
             <div className="hidden mt-6 md:flex space-x-4 items-center justify-end">
               <Link
                 to="/team"
-                className="text-sm font-semibold text-white hover:text-accent"
+                className="text-sm font-semibold text-black hover:text-accent"
               >
                 Join Our Team
               </Link>
               <button
-                className="bg-white text-[#2C1678] px-4 py-2 rounded-full hover:bg-accent transition duration-300 cursor-pointer"
-                onClick={() => navigate('/quote')}
+                className="bg-blue-700 text-white px-6 py-4 rounded-full hover:bg-accent transition duration-300 cursor-pointer"
+                onClick={() => navigate("/quote")}
               >
                 Book Our Service
               </button>
@@ -64,10 +62,10 @@ const Values = ({ stage }) => {
           )}
           <div className="flex flex-col items-start justify-center space-y-8 w-full max-w-3xl mx-auto">
             <div className="flex items-center">
-              <CheckCircle />
+              <CheckCircle border={false} />
               <div>
                 <h3 className="text-xl font-bold mb-2">INTEGRITY</h3>
-                <p className="text-gray-200">
+                <p className="text-black">
                   We act with honesty, transparency, and accountability in every
                   decision, ensuring our clients can trust us without
                   compromise.
@@ -78,7 +76,7 @@ const Values = ({ stage }) => {
               <CheckCircle />
               <div>
                 <h3 className="text-xl font-bold mb-2">PROFESSIONALISM</h3>
-                <p className="text-gray-200">
+                <p className="text-black">
                   We maintain the highest standards of conduct, appearance, and
                   performance in all our operations.
                 </p>
@@ -90,7 +88,7 @@ const Values = ({ stage }) => {
                 <h3 className="text-xl font-bold mb-2">
                   EXCELLENCE IN EXECUTION
                 </h3>
-                <p className="text-gray-200">
+                <p className="text-black">
                   We strive for excellence in every assignment, big or small,
                   because every detail matters in security.
                 </p>
@@ -103,11 +101,14 @@ const Values = ({ stage }) => {
           <div className="md:hidden mt-6 flex space-x-4 mx-auto items-center justify-end">
             <Link
               to="/team"
-              className="text-sm font-semibold text-white hover:text-accent"
+              className="text-sm font-semibold text-black hover:text-accent"
             >
               Join Our Team
             </Link>
-            <button className="bg-white text-[#2C1678] px-4 py-2 rounded-full hover:bg-accent transition duration-300">
+            <button
+              className="bg-blue-700 text-white px-6 py-4 rounded-full hover:bg-accent transition duration-300 cursor-pointer"
+              onClick={() => navigate("/quote")}
+            >
               Book Our Service
             </button>
           </div>

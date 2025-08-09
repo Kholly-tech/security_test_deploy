@@ -1,11 +1,19 @@
-import React from 'react';
-import guard1 from '../../assets/images/guard1.png';
-import { constants } from '../../utils/constants';
+import React from "react";
+import guard1 from "../../assets/images/guard1.png";
+import { constants } from "../../utils/constants";
 
-export const CheckCircle = () => (
+export const CheckCircle = ({ border = false }) => (
   <div className="flex items-center justify-center mr-4 mt-5">
-    <div className="bg-white rounded-full border-4 border-gray-300 w-9 h-9 flex items-center justify-center">
-      <div className="bg-red-700 w-4 h-4 rounded-full flex items-center justify-center">
+    <div
+      className={`${
+        border ? "border-4 border-gray-300 bg-white" : "bg-transparent"
+      } rounded-full  w-9 h-9 flex items-center justify-center`}
+    >
+      <div
+        className={`bg-red-700 ${
+          border ? "w-4 h-4" : "w-6 h-6"
+        } rounded-full flex items-center justify-center`}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5 text-white"
@@ -25,9 +33,9 @@ export const CheckCircle = () => (
   </div>
 );
 
-const PartnerWithUs = () => {
+const PartnerWithUs = ({ border = false }) => {
   return (
-    <div className="bg-indigo-900 text-white pb-6 md:pb-0 mt-8">
+    <div className="bg-blue-700 text-white pb-6 md:pb-0 mt-8">
       <div className="flex flex-col md:flex-row items-center">
         {/* Security Guard Image */}
         <div className="w-full md:w-1/2 mb-6 md:mb-0 md:mr-8">
@@ -35,10 +43,8 @@ const PartnerWithUs = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="w-full md:w-1/2 px-4 sm:px-8 lg:px-12">
-          <h2 className="text-2xl font-bold ">
-            WHY YOU SHOULD PARTNER WITH US
-          </h2>
+        <div className="w-full md:w-1/2 px-4 md:my-8 lg:mt sm:px-8 lg:px-12">
+          <h2 className="text-2xl font-bold ">Why Choose Us</h2>
           <p className="text-lg mb-4">
             Excellence in Security Services Backed by Experience and Integrity
           </p>
@@ -46,12 +52,9 @@ const PartnerWithUs = () => {
           {/* List of Benefits */}
           <ul className="space-y-6">
             {constants.patnershipData.map((data, idx) => (
-              <li key={idx} className="flex items-start">
-                <CheckCircle />
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">{data.title}</h3>
-                  <p className="text-sm">{data.description}</p>
-                </div>
+              <li key={idx} className="flex items-center">
+                <CheckCircle border={border} />
+                <h3 className="text-lg font-semibold -mb-4">{data.title}</h3>
               </li>
             ))}
           </ul>

@@ -8,8 +8,10 @@ import Testimonials from "../components/home/Testimonials";
 import CTA from "../components/home/CTA";
 import AboutUs from "../components/AboutUs";
 import { constants } from "../utils/constants";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full  ">
       {/* Hero Section */}
@@ -22,8 +24,8 @@ const Home = () => {
   flex items-center justify-center overflow-hidden
 "
       >
-        <video
-          src={heroVideo}
+        <img
+          src={heroImage}
           autoPlay
           loop
           muted
@@ -31,42 +33,48 @@ const Home = () => {
           alt="Hero Video"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-          <div className="text-center px-4 max-w-4xl mx-auto gap-4 flex-col">
-            <h1 className="text-white font-extrabold text-xl sm:text-3xl md:text-3xl lg:text-4xl mb-4 tracking-wider leading-tight">
-              WELCOME TO SAFETY SECURITY, INC.
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-start">
+          <div className="px-8 md:px-16 lg:px-30 max-w-4xl lg:max-w-5xl gap-4 flex-col text-start">
+            <h1 className="text-white font-extrabold text-xl sm:text-3xl md:text-3xl lg:text-5xl mb-4 tracking-wider leading-tight">
+              Professional Security Services You Can Rely On
             </h1>
-            <h2 className="text-white/90 font-normal text-lg sm:text-xl md:text-2xl lg:text-3xl tracking-wide">
-              EXPERTS IN PROVIDING SECURITY SERVICES
+            <h2 className="text-white/90 font-normal sm:text-lg md:text-xl lg:text-2xl tracking-wide">
+              We protect what matters most with dependable, highly trained
+              security officers who are responsive and reliable, safeguarding
+              assets, businesses, and events for perpetual peace of mind
             </h2>
             <div className="mt-2 sm:mt-6">
-              <div className="w-48 sm:w-2xl md:w-3xl h-1 bg-white mx-auto rounded-full" />
+              <button
+                type="button"
+                className="bg-blue-700 text-white py-3 px-8 font-semibold text-sm rounded-full mt-2 cursor-pointer"
+                onClick={() => {
+                  navigate("/quote");
+                  setMenuOpen(false);
+                }}
+              >
+                Request A Quote
+              </button>
             </div>
           </div>
         </div>
       </section>
-
-      {/* About Section */}
-      <AboutUs source="home" />
 
       {/* Industries We Serve */}
       <section className="py-8">
         <WhoWeServe />
       </section>
 
-      {/* Partner With Us */}
-      <section className="py-8">
-        <PartnerWithUs />
-      </section>
+      {/* About Section */}
+      <AboutUs source="home" />
 
       {/* Security Solutions */}
       <section className="py-8">
         <SecuritySolutions solutions={constants.securityData} />
       </section>
 
-      {/* Call to Action */}
+      {/* Partner With Us */}
       <section className="py-8">
-        <CTA />
+        <PartnerWithUs border />
       </section>
 
       {/* Testimonials */}

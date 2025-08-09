@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/images/logo2.png";
+import logo from "../assets/images/logo1.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { navItems } from "../utils/constants";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -10,18 +10,18 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className="w-full bg-[#3C18BE] h-20 flex items-center justify-between px-4 relative">
+    <nav className="w-full bg-white text-blue-700 h-20 flex items-center justify-between px-4 relative">
       <Link to={"/"} className="flex items-center gap-2">
         <img
           src={logo}
           className="w-[100px] md:w-[100px] h-[100px] -ml-2 md:-ml-4"
           alt="Logo"
         />
-        <div className="flex flex-col text-white -ml-2 md:-ml-5 my-auto">
+        <div className="flex flex-col text-red-500 -ml-2 md:-ml-5 my-auto">
           <h1 className="text-secondary text-lg md:text-2xl font-semibold">
             SAFETY SECURITY, INC.
           </h1>
-          <p className="text-secondary text-xs md:text-[17px] font-normal">
+          <p className="text-blue-700 text-xs md:text-[17px] font-normal">
             securing your properties and businesses
           </p>
         </div>
@@ -34,12 +34,12 @@ const NavBar = () => {
             <Link
               key={i}
               to={item.link}
-              className="text-white hover:text-blue-200 font-medium underline-offset-2"
+              className=" hover:text-blue-900 font-medium underline-offset-2"
             >
               {item.label}
             </Link>
             {location.pathname === item.link && (
-              <div className="bg-white h-0.25" />
+              <div className="bg-blue-700 h-0.5" />
             )}
           </div>
         ))}
@@ -48,15 +48,15 @@ const NavBar = () => {
         <button
           type="button"
           onClick={() => navigate("/quote")}
-          className="bg-white text-blue-800 p-3 font-semibold text-sm rounded-full cursor-pointer"
+          className="bg-blue-800 text-white px-8 py-3 font-semibold text-sm rounded-full cursor-pointer"
         >
-          Request A Quote
+          Hire A Guard
         </button>
       </div>
 
       {/* Mobile Hamburger */}
       <button
-        className="lg:hidden text-white focus:outline-none"
+        className="lg:hidden text-[#6b47f0] focus:outline-none"
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Open menu"
       >
@@ -66,7 +66,7 @@ const NavBar = () => {
       {/* Mobile Menu */}
       <div
         className={`
-          absolute top-20 left-0 w-full bg-[#3C18BE] flex flex-col items-center py-4 z-50 lg:hidden
+          absolute top-20 left-0 w-full bg-white flex flex-col items-center py-4 z-50 lg:hidden
           transition-all duration-300 ease-in-out
           ${
             menuOpen
@@ -79,7 +79,7 @@ const NavBar = () => {
           <Link
             key={i}
             to={item.link}
-            className="text-white py-2 w-full text-center hover:bg-blue-900"
+            className="text-blue-700 py-2 w-full text-center hover:bg-green/80"
             onClick={() => setMenuOpen(false)}
           >
             {item.label}
@@ -87,13 +87,13 @@ const NavBar = () => {
         ))}
         <button
           type="button"
-          className="bg-white text-blue-800 p-3 font-semibold text-sm rounded-full mt-2 cursor-pointer"
+          className="bg-blue-800 text-white py-3 px-8 font-semibold text-sm rounded-full mt-2 cursor-pointer"
           onClick={() => {
             navigate("/quote");
             setMenuOpen(false);
           }}
         >
-          Request A Quote
+          Hire A Guard
         </button>
       </div>
     </nav>

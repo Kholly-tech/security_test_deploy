@@ -3,6 +3,7 @@ import serviceHero from "../assets/images/serviceHero.png";
 import SecuritySolutions from "../components/home/SecuritySolutions";
 import { constants } from "../utils/constants";
 import { Link, useNavigate } from "react-router-dom";
+import CTA from "../components/home/CTA";
 
 const Services = () => {
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ const Services = () => {
           alt="Service Hero"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+        {/* <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div className="text-center px-4 max-w-4xl mx-auto gap-4 flex-col">
             <h1 className="text-white font-extrabold text-xl sm:text-3xl md:text-3xl lg:text-4xl mb-4 tracking-wider leading-tight">
               OUR SERVICES
@@ -44,16 +45,16 @@ const Services = () => {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
 
       <section className="md:py-4 pt-4">
         <SecuritySolutions solutions={constants.serviceData} />
       </section>
 
-      <div className="bg-indigo-900 text-white pb-6 md:pb-0 my-8 mb-16">
+      {/* <div className="bg-indigo-900 text-white pb-6 md:pb-0 my-8 mb-16">
         <div className="flex flex-col md:flex-row items-center">
-          {/* Security Guard Image */}
+          
           <div className="w-full md:w-1/2 mb-6 md:mb-0 md:mr-8">
             <img
               src={serviceHero}
@@ -62,7 +63,6 @@ const Services = () => {
             />
           </div>
 
-          {/* Benefits Section */}
           <div className="w-full y-4 md:w-1/2 px-4 sm:px-8 lg:px-12">
             <h2 className="text-2xl font-bold ">
               Protect What Matters Most. Partner with Safety Security, Inc.
@@ -87,7 +87,11 @@ const Services = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <section className="py-10 md:py-14 lg:py-18">
+        <CTA />
+      </section>
     </div>
   );
 };

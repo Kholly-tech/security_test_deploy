@@ -3,27 +3,34 @@ import React from 'react';
 const SecuritySolutions = ({ solutions }) => {
   return (
     <div className="bg-white py-8 px-4 sm:px-8 lg:px-16">
-      <h2 className="text-2xl font-bold mb-4 text-indigo-900 text-center">
-        SECURITY SOLUTIONS WE OFFER
+      <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-4 text-black/65 text-center">
+        Security Solutions We Offer
       </h2>
-      <p className="text-2xl mb-8 text-center">
-        At Safety Security, Inc., we provide specialist security services tailored to ensure the safety of property and people.
+      <p className="text-[15px] md:text-xl lg:text-2xl max-w-3xl mx-auto mb-8 text-center text-black/55">
+        At Safety Security, Inc., we provide special security services
+        customized to ensure the safety of property, people, and businesses
       </p>
 
       {/* Grid Layout */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         {solutions.map((solution, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-xl p-4">
+          <div key={index} className="bg-white shadow-lg flex flex-col items-center rounded-xl p-4">
             {/* Image */}
-            <img src={solution.image} alt={solution.title} className="w-full h-96 object-cover mb-4 rounded-t-xl" />
+            <img
+              src={solution.image}
+              alt={solution.title}
+              className="w-full h-60 object-cover mb-4 rounded-t-xl"
+            />
 
             {/* Title */}
-            <h3 className="text-sm font-semibold mb-1">{solution.title}</h3>
-
-            <p className='text-xs md:text-[16px] text-red-800 font-semibold mb-3'>{solution.desc}</p>
+            <h3 className="text-lg text-center font-semibold mb-4">{solution.title}</h3>
 
             {/* Description */}
-            <p className="text-gray-700 text-sm md:text-[18px]">{solution.description}</p>
+            <p className="flex-1 text-gray-700 text-center w-full max-w-xs mx-auto text-sm md:text-[18px]">
+              {solution.description}
+            </p>
+
+            <button className='mt-12 text-red-500/90 font-medium items-end justify-end cursor-pointer'>Get Service</button>
           </div>
         ))}
       </div>
