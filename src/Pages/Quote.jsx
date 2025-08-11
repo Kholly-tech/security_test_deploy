@@ -123,7 +123,7 @@ const Quote = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-[#3C18BE] hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="w-full bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         >
           Submit
         </button>

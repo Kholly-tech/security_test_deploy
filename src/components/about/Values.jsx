@@ -11,7 +11,7 @@ const Values = ({ stage }) => {
         stage === 1 ? "py-12 px-6 md:px-24" : "pb-6 md:pb-0"
       }`}
     >
-      <h2 className="text-2xl font-bold mb-6 md:px-10">Our Value and Philosophy</h2>
+      {stage == 1 && (<h2 className="text-2xl font-bold mb-6 md:px-10">Our Value and Philosophy</h2>)}
       <div className="flex flex-col md:flex-row justify-between items-start">
         {/* Left Side: Description */}
         {stage === 1 && (

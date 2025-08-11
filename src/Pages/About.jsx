@@ -9,6 +9,7 @@ import Stats from '../components/about/Stats';
 import Mission from '../components/about/Mission';
 import { useNavigate } from 'react-router-dom';
 import Reasons from '../components/about/Reasons';
+import { motion } from 'framer-motion';
 
 const About = () => {
   const navigate = useNavigate();
@@ -40,16 +41,24 @@ const About = () => {
               lincesed professionals
             </h2>
             <div className="mt-2 sm:mt-6">
-              <button
-                type="button"
-                className="bg-blue-700 text-white py-3 px-8 font-semibold text-sm rounded-full mt-2 cursor-pointer"
-                onClick={() => {
-                  navigate("/quote");
-                  setMenuOpen(false);
+              <motion.button
+                initial={{ scale: 0 }}
+                whileInView={{
+                  scale: 1,
+                  transition: {
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 10,
+                    delay: 0.2,
+                  },
                 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-blue-700 text-white py-3 px-8 font-semibold text-sm rounded-full mt-2 cursor-pointer"
+                onClick={() => navigate("/quote")}
               >
                 Book Consultation
-              </button>
+              </motion.button>
             </div>
           </div>
         </div>

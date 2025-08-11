@@ -146,7 +146,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="bg-[#3C18BE] w-full h-12 rounded-lg text-white cursor-pointer"
+              className="bg-blue-700 w-full h-12 rounded-lg text-white cursor-pointer"
             >
               Submit
             </button>

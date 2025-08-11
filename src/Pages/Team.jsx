@@ -8,7 +8,7 @@ const Team = () => {
   return (
     <div>
       <div className="text-center my-10 md:my-20">
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-[#3C18BE]">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-blue-700">
           BE A PART OF OUR TEAM
         </h1>
         <p className="text-lg md:text-xl lg:text-3xl mt-2 font-semibold">
@@ -52,7 +52,7 @@ const Team = () => {
                 Send your completed form and resume to: <br />
                 <a
                   href="mailto:Service@safetysecurityinc.com"
-                  className="text-[#512ADE]"
+                  className="text-blue-700"
                 >
                   Service@safetysecurityinc.com
                 </a>
@@ -64,7 +64,7 @@ const Team = () => {
         <div className="w-full max-w-xl mx-auto">
           <button
             type="button"
-            className="p-4 bg-[#3C18BE] w-full h-16 rounded-xl text-white font-semibold flex items-center justify-center gap-2 cursor-pointer"
+            className="p-4 bg-blue-700 w-full h-16 rounded-xl text-white font-semibold flex items-center justify-center gap-2 cursor-pointer"
             onClick={() =>
               downloadFile(
                 file,
