@@ -94,14 +94,16 @@ const Footer = () => {
           <div className="text-white/60">
             <p>
               Address:{" "}
-              <span className="ml-5 text-white">
+              <span className="ml-5 text-white font-semibold">
                 154 Maverick Street, Boston, MA 02128
               </span>
             </p>
             <p>
-              Telephone: <span className="ml-3 text-white">781.471.8258</span>
+              Telephone:{" "}
+              <span className="ml-3 text-white font-semibold">
+                781.471.8258,   781.816.0430
+              </span>
             </p>
-            <p className="ml-24 text-white">781.816.0430</p>
           </div>
         </div>
       </div>
