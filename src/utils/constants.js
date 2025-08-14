@@ -137,9 +137,9 @@ export const constants = {
       icon: serve3,
     },
     {
-      title: "Logistics & Transport ",
+      title: "Concierge Security",
       descriptions:
-        "We offer protection, cargo monitoring, and warehouse guarding to minimize risks and ensure the safe transit of goods from origin to destination",
+        "Concierge security merges the roles of a security guard and a concierge, providing safety and protection alongside outstanding customer service",
       icon: serve4,
     },
   ],

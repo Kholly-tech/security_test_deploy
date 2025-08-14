@@ -65,7 +65,7 @@ const Reasons = () => {
             </div>
             
             <motion.div 
-              className="absolute inset-0 bg-black/80 flex items-center justify-center p-4"
+              className="absolute inset-0 bg-blue-900 flex items-center justify-center p-4"
               initial={{ y: "100%" }}
               animate={{ 
                 y: hoveredIndex === index ? "0%" : "100%",

@@ -17,7 +17,7 @@ const HeroSection = () => {
     heroImage1,
     heroImage2,
     heroImage3,
-    heroImage4,
+    // heroImage4,
     heroImage5,
   ];
 
@@ -74,7 +74,8 @@ const HeroSection = () => {
               className="w-full h-full object-cover"
             />
             {/* Gradient overlay for better text readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/20"></div>
+            {/* // bg-gradient-to-r from-black/30 via-black/20 to-black/10 */}
           </div>
         ))}
       </div>
