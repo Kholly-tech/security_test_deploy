@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2E06BD] text-white py-12 px-4 sm:px-8 lg:px-32">
+    <footer className="bg-[#2E06BD] text-white py-12 px-4 sm:px-8 lg:px-20">
       <div className="flex flex-col md:flex-row justify-between items-start">
         {/* Logo */}
         <div className="mb-6 md:mb-0 md:mr-10 flex flex-col items-center gap-4 justify-start md:w-1/4">
@@ -94,7 +94,7 @@ const Footer = () => {
           <div className="text-white/60">
             <p>
               Address:{" "}
-              <span className="ml-5 text-white font-semibold">
+              <span className="ml-5 md:-mr-10 text-white font-semibold ">
                 154 Maverick Street, Boston, MA 02128
               </span>
             </p>

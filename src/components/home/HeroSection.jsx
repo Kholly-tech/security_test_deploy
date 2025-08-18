@@ -5,7 +5,7 @@ import heroImage1 from "../../assets/images/hero1.png";
 import heroImage2 from "../../assets/images/hero2.png";
 import heroImage3 from "../../assets/images/hero3.png";
 import heroImage4 from "../../assets/images/hero4.png";
-import heroImage5 from "../../assets/images/serviceHero.png";
+import heroImage5 from "../../assets/images/hero5.png";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
@@ -17,7 +17,7 @@ const HeroSection = () => {
     heroImage1,
     heroImage2,
     heroImage3,
-    // heroImage4,
+    heroImage4,
     heroImage5,
   ];
 
