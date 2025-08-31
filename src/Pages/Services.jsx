@@ -1,5 +1,5 @@
 import React from "react";
-import serviceHero from "../assets/images/serviceHero.png";
+import serviceHero from "../assets/images/webp/serviceHero2.webp";
 import SecuritySolutions from "../components/home/SecuritySolutions";
 import { constants } from "../utils/constants";
 import { Link, useNavigate } from "react-router-dom";

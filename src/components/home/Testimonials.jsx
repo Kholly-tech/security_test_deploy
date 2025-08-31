@@ -12,22 +12,22 @@ const Testimonials = () => {
     {
       quote:
         "Outstanding service! The security personnel are well-trained and maintain excellent communication throughout their shifts. They've handled several situations with professionalism and discretion. Our retail store has never felt more secure.",
-      author: "Sarah M., Store Manager, New York, NY",
+      author: "Sarah M., Store Manager, Boston, MA",
     },
     {
       quote:
         "We've been working with this security company for over two years, and they consistently exceed our expectations. Their 24/7 monitoring service gives us peace of mind, and their rapid response times are impressive.",
-      author: "Michael Chen, Facility Director, Los Angeles, CA",
+      author: "Michael Chen, Facility Director, Boston, MA",
     },
     {
       quote:
         "Exceptional security services for our corporate events. The team coordinates seamlessly with our staff and ensures all guests feel safe and welcome. Their attention to detail and professional demeanor make them our go-to choice.",
-      author: "Amanda Rodriguez, Event Coordinator, Chicago, IL",
+      author: "Amanda Rodriguez, Event Coordinator, Boston, MA",
     },
     {
       quote:
         "From the initial consultation to ongoing service delivery, this company has been fantastic. Their security guards are not just protectors but also ambassadors of our brand. They treat our premises with respect and our visitors with courtesy.",
-      author: "David Thompson, Operations Manager, Miami, FL",
+      author: "David Thompson, Operations Manager, Boston, MA",
     },
   ];
 

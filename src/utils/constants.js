@@ -2,18 +2,18 @@ import serve1 from "../assets/icons/serve1.svg";
 import serve2 from "../assets/icons/serve2.svg";
 import serve3 from "../assets/icons/serve3.svg";
 import serve4 from "../assets/icons/serve4.svg";
-import logoLift from "../assets/images/logo1.png";
+import logoLift from "../assets/images/webp/logo1.webp";
 
-import solution1 from '../assets/images/solution1.png';
-import solution2 from '../assets/images/solution2.png';
-import solution3 from '../assets/images/solution3.png';
-import solution4 from '../assets/images/solution4.png';
-import solution5 from '../assets/images/solution5.png';
-import solution6 from '../assets/images/solution6.png';
-import solution7 from '../assets/images/solution7.png';
-import solution8 from '../assets/images/solution8.png';
-import solution9 from '../assets/images/solution9.png';
-import solution10 from '../assets/images/solution10.png';
+import solution1 from "../assets/images/webp/solution1.webp";
+import solution2 from "../assets/images/webp/solution2.webp";
+import solution3 from "../assets/images/webp/solution3.webp";
+import solution4 from "../assets/images/webp/solution4.webp";
+import solution5 from "../assets/images/webp/solution5.webp";
+import solution6 from "../assets/images/webp/solution6.webp";
+import solution7 from "../assets/images/webp/solution7.webp";
+import solution8 from "../assets/images/webp/solution8.webp";
+import solution9 from "../assets/images/webp/solution9.webp";
+import solution10 from "../assets/images/webp/solution10.webp";
 
 export const navItems = [
   { label: "Home", link: "/" },

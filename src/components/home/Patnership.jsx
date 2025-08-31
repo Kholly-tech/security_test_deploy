@@ -1,5 +1,5 @@
 import React from "react";
-import guard1 from "../../assets/images/guard1.png";
+import guard1 from "../../assets/images/webp/guard1.webp";
 import { constants } from "../../utils/constants";
 
 export const CheckCircle = ({ border = false }) => (

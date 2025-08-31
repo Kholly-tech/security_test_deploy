@@ -1,15 +1,15 @@
-import React from 'react'
-import WhoWeServe from '../components/home/WhoWeServe'
-import Testimonials from '../components/home/Testimonials'
-import heroImage from '../assets/images/hero5.png';
-import AboutUs from '../components/AboutUs';
-import CTA from '../components/home/CTA';
-import Values from '../components/about/Values';
-import Stats from '../components/about/Stats';
-import Mission from '../components/about/Mission';
-import { useNavigate } from 'react-router-dom';
-import Reasons from '../components/about/Reasons';
-import { motion } from 'framer-motion';
+import React from "react";
+import WhoWeServe from "../components/home/WhoWeServe";
+import Testimonials from "../components/home/Testimonials";
+import heroImage from "../assets/images/webp/hero5.webp";
+import AboutUs from "../components/AboutUs";
+import CTA from "../components/home/CTA";
+import Values from "../components/about/Values";
+import Stats from "../components/about/Stats";
+import Mission from "../components/about/Mission";
+import { useNavigate } from "react-router-dom";
+import Reasons from "../components/about/Reasons";
+import { motion } from "framer-motion";
 
 const About = () => {
   const navigate = useNavigate();
@@ -79,6 +79,6 @@ const About = () => {
       </section>
     </div>
   );
-}
+};
 
-export default About
+export default About;

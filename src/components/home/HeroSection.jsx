@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LineAnimate from "./LineAnimate";
-import heroImage1 from "../../assets/images/hero1.png";
-import heroImage2 from "../../assets/images/hero2.png";
-import heroImage3 from "../../assets/images/hero3.png";
-import heroImage4 from "../../assets/images/hero4.png";
-import heroImage5 from "../../assets/images/hero5.png";
+import heroImage1 from "../../assets/images/webp/hero1.webp";
+import heroImage2 from "../../assets/images/webp/hero2.webp";
+import heroImage3 from "../../assets/images/webp/hero3.webp";
+import heroImage4 from "../../assets/images/webp/hero4.webp";
+import heroImage5 from "../../assets/images/webp/hero5.webp";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {

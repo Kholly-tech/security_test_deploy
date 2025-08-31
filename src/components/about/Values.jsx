@@ -1,7 +1,7 @@
 import React from "react";
 import { CheckCircle } from "../home/Patnership";
 import { Link, useNavigate } from "react-router-dom";
-import serviceHero from "../../assets/images/serviceHero.png";
+import serviceHero from "../../assets/images/webp/serviceHero.webp";
 
 const Values = ({ stage }) => {
   const navigate = useNavigate();
@@ -11,7 +11,11 @@ const Values = ({ stage }) => {
         stage === 1 ? "py-12 px-6 md:px-24" : "pb-6 md:pb-0"
       }`}
     >
-      {stage == 1 && (<h2 className="text-2xl font-bold mb-6 md:px-10">Our Value and Philosophy</h2>)}
+      {stage == 1 && (
+        <h2 className="text-2xl font-bold mb-6 md:px-10">
+          Our Value and Philosophy
+        </h2>
+      )}
       <div className="flex flex-col md:flex-row justify-between items-start">
         {/* Left Side: Description */}
         {stage === 1 && (

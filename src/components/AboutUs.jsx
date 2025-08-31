@@ -1,8 +1,8 @@
 import React from "react";
 import secureIcon from "../assets/icons/Vector.png";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import aboutImage1 from "../assets/images/about1.png";
-import aboutImage2 from "../assets/images/about2.png";
+import aboutImage1 from "../assets/images/webp/about1.webp";
+import aboutImage2 from "../assets/images/webp/about2.webp";
 import { useNavigate } from "react-router-dom";
 import { constants } from "../utils/constants";
 import { motion } from "framer-motion";

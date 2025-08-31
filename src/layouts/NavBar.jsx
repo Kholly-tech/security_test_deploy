@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/images/logo1.png";
+import logo from "../assets/images/webp/logo1.webp";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { navItems } from "../utils/constants";
 import { Icon } from "@iconify/react/dist/iconify.js";
