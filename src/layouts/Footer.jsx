@@ -51,6 +51,11 @@ const Footer = () => {
                 Our Services
               </Link>
             </li>
+            <li>
+              <Link to="/contact" className="text-gray-400 hover:text-white">
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -101,8 +106,17 @@ const Footer = () => {
             <p>
               Telephone:{" "}
               <span className="ml-3 text-white font-semibold">
-                781.471.8258,   781.816.0430
+                781.471.8258, 781.816.0430
               </span>
+            </p>
+            <p>
+              Email Address:{" "}
+              <a
+                href="mailto:Service@safetysecurityinc.com"
+                className="ml-5 md:-mr-10 text-white font-semibold "
+              >
+                Service@safetysecurityinc.com
+              </a>
             </p>
           </div>
         </div>

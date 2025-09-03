@@ -7,6 +7,8 @@ const Quote = () => {
     email: "",
     service: "",
     message: "",
+    companyAddress: "",
+    companyName: "",
   });
 
   // Function to handle input changes
@@ -73,6 +75,44 @@ const Quote = () => {
             id="email"
             name="email"
             value={formData.email}
+            onChange={handleChange}
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            required
+          />
+        </div>
+
+        {/* Company Name Input */}
+        <div className="mb-4">
+          <label
+            htmlFor="companyName"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
+            Company Name
+          </label>
+          <input
+            type="text"
+            id="companyName"
+            name="companyName"
+            value={formData.companyName}
+            onChange={handleChange}
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            required
+          />
+        </div>
+
+        {/* Company Address Input */}
+        <div className="mb-4">
+          <label
+            htmlFor="companyAddress"
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
+            Company Address
+          </label>
+          <input
+            type="text"
+            id="companyAddress"
+            name="companyAddress"
+            value={formData.companyAddress}
             onChange={handleChange}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             required

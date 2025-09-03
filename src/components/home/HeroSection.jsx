@@ -56,7 +56,7 @@ const HeroSection = () => {
     );
   };
   return (
-    <section className="relative w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-[calc(100vh-380px)] lg:min-h-[calc(100vh-250px)] flex  items-center justify-center overflow-hidden">
       {/* Image Slider Container */}
       <div className="absolute inset-0 w-full h-full">
         {heroImages.map((image, index) => (
@@ -140,9 +140,9 @@ const HeroSection = () => {
           {/* Animated Title */}
           <div className="transform transition-all duration-1000 ease-out">
             <h1 className="text-white font-extrabold text-xl sm:text-3xl md:text-3xl lg:text-5xl mb-4 tracking-wider leading-tight relative animate-fade-in-up">
-              Professional Security Services You{" "}
+              Professional Security Services You Can{" "}
               <span className="relative inline-block">
-                <span className="relative z-10">Can Rely On</span>
+                <span className="relative z-10">Rely On</span>
                 {/* Responsive Animated Red Oval */}
                 <LineAnimate animate={animate} />
               </span>

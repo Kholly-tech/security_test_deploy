@@ -33,7 +33,7 @@ const Values = ({ stage }) => {
             <div className="hidden mt-6 md:flex space-x-4 items-center justify-end">
               <Link
                 to="/team"
-                className="text-sm font-semibold text-black hover:text-accent"
+                className="text-lg font-bold text-black hover:text-accent"
               >
                 Join Our Team
               </Link>
@@ -52,7 +52,7 @@ const Values = ({ stage }) => {
             <img
               src={serviceHero}
               alt="Image"
-              className="w-full h-auto object-cover"
+              className="w-full h-auto object-cover" //08166132774
             />
           </div>
         )}
@@ -105,7 +105,7 @@ const Values = ({ stage }) => {
           <div className="md:hidden mt-6 flex space-x-4 mx-auto items-center justify-end">
             <Link
               to="/team"
-              className="text-sm font-semibold text-black hover:text-accent"
+              className="text-lg font-bold text-black hover:text-accent"
             >
               Join Our Team
             </Link>

@@ -14,10 +14,10 @@ const NavBar = () => {
       <Link to={"/"} className="flex items-center gap-2">
         <img
           src={logo}
-          className="w-[100px] md:w-[100px] h-[100px] -ml-2 md:-ml-4"
+          className="w-[140px] md:w-[140px] h-[140px] -ml-12 md:-ml-12"
           alt="Logo"
         />
-        <div className="flex flex-col text-red-500 -ml-2 md:-ml-5 my-auto">
+        <div className="flex flex-col text-red-500 -ml-10 md:-ml-8 my-auto">
           <h1 className="text-secondary text-lg md:text-2xl font-semibold">
             SAFETY SECURITY, INC.
           </h1>

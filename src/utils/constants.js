@@ -257,7 +257,7 @@ export const constants = {
 
     {
       image: solution7,
-      title: "Data Security",
+      title: "CCTV / Surveillance",
       desc: "Trust us to secure your data with the same professionalism we bring to physical protection",
       description:
         "We specialize in safeguarding sensitive information from breaches, cyber threats, and unauthorized access through advanced encryption, access control, and cybersecurity protocols",

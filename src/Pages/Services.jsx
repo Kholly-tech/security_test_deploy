@@ -15,7 +15,8 @@ const Services = () => {
   relative w-full 
   min-h-[60vh] 
   sm:min-h-[70vh] 
-  md:min-h-[calc(100vh-80px)] 
+  md:min-h-[calc(100vh-380px)] 
+  lg:min-h-[calc(100vh-250px)] 
   flex items-center justify-center overflow-hidden
 "
       >
