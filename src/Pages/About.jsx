@@ -38,8 +38,8 @@ const About = () => {
               About Safety Security, Inc.
             </h1>
             <h2 className="text-white/90 font-normal text-lg sm:text-xl md:text-2xl lg:text-3xl tracking-wide">
-              Protectng people, properties, and peace of mind with trusted,
-              lincesed professionals
+              Protecting people, properties, and peace of mind with trusted,
+              licensed professionals
             </h2>
             <div className="mt-2 sm:mt-6">
               <motion.button
