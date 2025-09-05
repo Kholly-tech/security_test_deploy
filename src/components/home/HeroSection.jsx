@@ -56,7 +56,12 @@ const HeroSection = () => {
     );
   };
   return (
-    <section className="relative w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-[calc(100vh-380px)] lg:min-h-[calc(100vh-250px)] flex  items-center justify-center overflow-hidden">
+    <section className="relative w-full 
+    min-h-[60vh] 
+    sm:min-h-[70vh] 
+    md:min-h-[calc(100vh-200px)] 
+    lg:min-h-[calc(100vh-180px)] 
+    flex  items-center justify-center overflow-hidden">
       {/* Image Slider Container */}
       <div className="absolute inset-0 w-full h-full">
         {heroImages.map((image, index) => (
